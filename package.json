@@ -1,0 +1,21 @@
+{
+  "name": "perftest",
+  "version": "1.0.0",
+  "description": "A classic Hello World API ready to be attached to AWS API Gateway. Triggered with a GET /hello invocation",
+  "main": "lambda.js",
+  "files": [
+    "lambda.js",
+    "aws-api-helloworld-flow.json",
+    "node_modules/**/*"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "load-test": "artillery run --output local-report.json tests/demo-api-load.yml"
+  },
+  "dependencies": {
+    "@kumologica/runtime": "3.3.0-beta9"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.513.0"
+  }
+}
